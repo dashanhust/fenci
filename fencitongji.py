@@ -16,6 +16,7 @@ from imageio import imread
 YANJIANGFILE = 'yanjiang.txt'
 STOPWORDFILE = 'stopword.txt'
 MASKFILE = 'wechat_logo.jpg'
+SAVEIMGFILE = 'ciyun.jpg'
 
 # 加载待统计文章
 content = []
@@ -65,5 +66,5 @@ wordcloud.recolor(color_func=img_color)
 
 plt.imshow(wordcloud, interpolation='bilinear')
 plt.axis('off')
-plt.show()
-
+#plt.show()
+plt.savefig(SAVEIMGFILE)
